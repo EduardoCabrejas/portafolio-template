@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root[data-theme='light'] {
+  --bgColor: #8ddbff; 
+  --navBarBackground: #9AD7FF; /* bg-light-lightBlue1 */
+  --navBarGradientStart: #76C8FF; /* bg-light-darkBlue2, desde */
+  --navBarGradientEnd: #00A4BA; /* bg-light-greenBlue1, hasta */
+  --textColor: #040D23;
+  --titleColor: #043A5E;
+  --borderColor: #005a5b;
+  --textShadow: 1px 1px 2px #035D9B, 0 0 2rem #043A5E, 0 0 1rem #01414a;
+}
+
+:root[data-theme='dark'] {
+  --bgColor: #040D23; 
+  --navBarBackground: #035D9B; /* bg-dark-lightBlue1 */
+  --navBarGradientStart: #043A5E; /* bg-dark-darkBlue2, desde */
+  --navBarGradientEnd: #01414a; /* bg-dark-greenBlue1, hasta */
+  --textColor: #95B3FF; 
+  --titleColor: #35B4FE;
+  --borderColor: #005a5b;
+  --textShadow: 1px 1px 2px #9AD7FF, 0 0 2rem #76C8FF, 0 0 1rem #00A4BA;
+}
+
+body {
+  background-color: var(--bgColor);
+}
+
+.navbar {
+  background: radial-gradient(circle at center, 
+  var(--navBarGradientStart), 
+  var(--navBarGradientEnd),
+  var(--navBarBackground)); 
+}
+
+.text {
+  color: var(--textColor);
+  @apply text-left text-xl font-Sawarabi mt-4;
+}
+
+/* containers */
+.bodyContainer {
+  @apply m-medium; 
+}
+
+/* title & subtitles */
+.title {
+    @apply text-center text-3xl font-Dela pt-6;
+    color: var(--titleColor);
+      &:hover {
+      transition: 0.5s;
+      text-shadow: var(--textShadow);
+    }
+}
+
+/* buttons */
+
+.navButtonDark {
+    @apply cursor-pointer rounded-md px-5 py-2 font-semibold text-white bg-dark-lightBlue2 transition duration-300 ease-in-out hover:shadow-xl hover:bg-dark-darkBlue2 hover:ring-2 hover:ring-dark-lightBlue1 hover:shadow-dark-lightBlue2 hover:text-white focus:ring-light-greenBlue2 focus:shadow-light-greenBlue1;
+  }
+
+  .navButtonLight {
+    @apply cursor-pointer rounded-md px-5 py-2 font-semibold text-blue-950 bg-light-lightBlue2 transition duration-300 ease-in-out hover:shadow-xl hover:bg-light-darkBlue2 hover:ring-2 hover:ring-light-lightBlue1 hover:shadow-light-lightBlue2 hover:text-blue-950 focus:ring-dark-greenBlue2 focus:shadow-dark-greenBlue1;
+  }
+
+/* images */
+
+.profile {
+  @apply rounded-full;
+  border-width: 2px;
+  border-color: var(--borderColor);
+}
