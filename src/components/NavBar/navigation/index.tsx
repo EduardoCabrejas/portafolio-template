@@ -15,7 +15,7 @@ const NavBar: React.FC = () => {
         <Image src={logo} alt="Logo" className="p-4 rounded-full w-8rem h-8rem"/>
       </div>
       <div className="flex flex-wrap gap-8 overflow-visible md:justify-center pr-4">
-        <ScrollLink to="about-me" smooth={true} duration={500} className={buttonClass}>Sobre mí</ScrollLink>
+        {/* <ScrollLink to="about-me" smooth={true} duration={500} className={buttonClass}>Sobre mí</ScrollLink> */}
         <ScrollLink to="skills" smooth={true} duration={500} className={buttonClass}>Habilidades</ScrollLink>
         <ScrollLink to="projects" smooth={true} duration={500} className={buttonClass}>Proyectos</ScrollLink>
         <ScrollLink to="contact" smooth={true} duration={500} className={buttonClass}>Contáctame</ScrollLink>

@@ -6,12 +6,15 @@ import git from '@/assets/icons/1 Git.png';
 import gitb from '@/assets/icons/1 gitBash.png';
 import gith from '@/assets/icons/1 GitHub.png';
 import visual from '@/assets/icons/1 Visual Studio Code (VS Code).png';
+import axios from '@/assets/icons/2 Axios.png'
 import boot from '@/assets/icons/2 Bootstrap.png';
+import express from '@/assets/icons/2 Express.png';
 import eslint from '@/assets/icons/2 ESLint.png';
 import mui from '@/assets/icons/2 Material UI.png';
 import mongo from '@/assets/icons/2 MongoDB.png';
 import next from '@/assets/icons/2 Next.js.png';
-import node from '@/assets/icons/2 PostgresSQL.png';
+import node from '@/assets/icons/2 Node.js.png';
+import postgre from '@/assets/icons/2 PostgresSQL.png';
 import react from '@/assets/icons/2 React.png';
 import redux from '@/assets/icons/2 Redux.png';
 import tailwind from '@/assets/icons/2 Tailwind CSS.png';
@@ -29,12 +32,15 @@ export const imagesArray = [
     { src: gitb, title: 'Git Bash' },
     { src: gith, title: 'GitHub' },
     { src: visual, title: 'Visual Studio Code' },
+    { src: axios, title: 'Axios' },
     { src: boot, title: 'Bootstrap' },
     { src: eslint, title: 'ESLint' },
+    { src: express, title: 'Express' },
     { src: mui, title: 'Material UI' },
     { src: mongo, title: 'MongoDB' },
     { src: next, title: 'Next.JS' },
     { src: node, title: 'Node.JS' },
+    { src: postgre, title: 'PostgreSQL' },
     { src: react, title: 'React' },
     { src: redux, title: 'Redux' },
     { src: tailwind, title: 'Tailwind CSS' },

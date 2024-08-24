@@ -1,6 +1,7 @@
 import AboutMe from "./Home/page";
 import { Suspense } from "react";
 import Skills from "./Skills/page";
+import Projects from "./Projects/page";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
           <Skills />
         </div>
         <div id="projects">
-        {/* Contenido de Proyectos */}
+        <Projects />
         </div>
         <div id="contact">
           {/* Contenido de Contacto */}

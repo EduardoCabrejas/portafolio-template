@@ -20,7 +20,7 @@
   --navBarGradientEnd: #01414a; /* bg-dark-greenBlue1, hasta */
   --textColor: #95B3FF; 
   --titleColor: #35B4FE;
-  --borderColor: #005a5b;
+  --borderColor: #00d5d9;
   --textShadow: 1px 1px 2px #9AD7FF, 0 0 2rem #76C8FF, 0 0 1rem #00A4BA;
 }
 
@@ -39,40 +39,68 @@ body {
   var(--navBarBackground)); 
 }
 
-.text {
-  color: var(--textColor);
-  @apply text-left text-xl font-Sawarabi mt-4;
-}
 
 /* containers */
 .bodyContainer {
   @apply m-medium; 
 }
 
-/* title & subtitles */
+/* texts */
 .title {
-    @apply text-center text-3xl font-Dela pt-6;
-    color: var(--titleColor);
-      &:hover {
-      transition: 0.5s;
-      text-shadow: var(--textShadow);
-    }
+  @apply text-center text-xl font-Dela pt-6 md:text-3xl;
+  color: var(--titleColor);
+  &:hover {
+    transition: 0.5s;
+    text-shadow: var(--textShadow);
+  }
+}
+.text {
+  color: var(--textColor);
+  @apply text-left text-lg font-Sawarabi md:text-xl;
+}
+.redact {
+  color: var(--textColor);
+  @apply text-center text-lg font-Sawarabi p-4 md:text-2xl;
 }
 
 /* buttons */
 
 .navButtonDark {
-    @apply cursor-pointer rounded-md px-5 py-2 font-semibold text-white bg-dark-lightBlue2 transition duration-300 ease-in-out hover:shadow-xl hover:bg-dark-darkBlue2 hover:ring-2 hover:ring-dark-lightBlue1 hover:shadow-dark-lightBlue2 hover:text-white focus:ring-light-greenBlue2 focus:shadow-light-greenBlue1;
+    @apply flex justify-center items-center cursor-pointer rounded-md px-5 py-2 font-semibold text-white bg-dark-lightBlue2 transition duration-300 ease-in-out hover:shadow-xl hover:bg-dark-darkBlue2 hover:ring-2 hover:ring-dark-lightBlue1 hover:shadow-dark-lightBlue2 hover:text-white focus:ring-light-greenBlue2 focus:shadow-light-greenBlue1;
   }
 
   .navButtonLight {
-    @apply cursor-pointer rounded-md px-5 py-2 font-semibold text-blue-950 bg-light-lightBlue2 transition duration-300 ease-in-out hover:shadow-xl hover:bg-light-darkBlue2 hover:ring-2 hover:ring-light-lightBlue1 hover:shadow-light-lightBlue2 hover:text-blue-950 focus:ring-dark-greenBlue2 focus:shadow-dark-greenBlue1;
+    @apply flex justify-center items-center cursor-pointer rounded-md px-5 py-2 font-semibold text-blue-950 bg-light-lightBlue2 transition duration-300 ease-in-out hover:shadow-xl hover:bg-light-darkBlue2 hover:ring-2 hover:ring-light-lightBlue1 hover:shadow-light-lightBlue2 hover:text-blue-950 focus:ring-dark-greenBlue2 focus:shadow-dark-greenBlue1;
   }
 
-/* images */
+  .redirButtonDark {
+    @apply flex justify-center items-center cursor-pointer rounded-md px-5 py-2 gap-4 h-12 w-3/4 font-semibold text-white bg-dark-lightBlue2 transition duration-300 ease-in-out hover:shadow-xl hover:bg-dark-darkBlue2 hover:ring-2 hover:ring-dark-lightBlue1 hover:shadow-dark-lightBlue2 hover:text-white focus:ring-light-greenBlue2 focus:shadow-light-greenBlue1;
+  }
+
+  .redirButtonLight {
+    @apply flex justify-center items-center cursor-pointer rounded-md px-5 py-2 gap-4 h-12 w-3/4 font-semibold text-blue-950 bg-light-lightBlue2 transition duration-300 ease-in-out hover:shadow-xl hover:bg-light-darkBlue2 hover:ring-2 hover:ring-light-lightBlue1 hover:shadow-light-lightBlue2 hover:text-blue-950 focus:ring-dark-greenBlue2 focus:shadow-dark-greenBlue1;
+  }
+
+/* content */
 
 .profile {
   @apply rounded-full;
   border-width: 2px;
   border-color: var(--borderColor);
+}
+
+.projectsContainer {
+  @apply flex flex-col rounded-xl;
+  border-width: 2px;
+  background-color: var(--navBarBackground);
+  border-color: var(--borderColor);
+}
+
+.videoContainer {
+  @apply grid grid-cols-2 justify-center items-center p-2;
+
+}
+
+.video {
+  @apply w-full h-20rem p-6;
 }
