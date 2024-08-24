@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light">
       <body className={`${inter.className} flex flex-col bg-bgColor relative`}>
-      <ThemeProvider> {/* Envuelve todo el layout en ThemeProvider */}
+      <ThemeProvider>
           <NavBar />
           <main className="min-h-screen">{children}</main>
           <ThemeMode />

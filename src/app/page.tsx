@@ -17,10 +17,18 @@ export default function Home() {
           </div>
         }
       >
-    <div>
-        <AboutMe />
-        <Skills />
-    </div>
+        <div id="about-me">
+          <AboutMe />
+        </div>
+        <div id="skills">
+          <Skills />
+        </div>
+        <div id="projects">
+        {/* Contenido de Proyectos */}
+        </div>
+        <div id="contact">
+          {/* Contenido de Contacto */}
+        </div>
       </Suspense>
     </>
   );

@@ -40,6 +40,7 @@ const config: Config = {
         '5rem': '5rem',
         '8rem': '8rem',
         '15rem': '15rem',
+        '20rem': '20rem',
         '25rem': '25rem',
         '30rem': '30rem',
         'small': '1rem',

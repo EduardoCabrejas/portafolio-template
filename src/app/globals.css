@@ -24,6 +24,10 @@
   --textShadow: 1px 1px 2px #9AD7FF, 0 0 2rem #76C8FF, 0 0 1rem #00A4BA;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bgColor);
 }

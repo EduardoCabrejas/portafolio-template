@@ -2,8 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import logo from "@/assets/logos/logo.jpg";
-import Link from "next/link";
 import { useTheme } from "@/context/themeContext";
+import { Link as ScrollLink } from "react-scroll";
 
 const NavBar: React.FC = () => {
   const { theme } = useTheme();
@@ -15,9 +15,10 @@ const NavBar: React.FC = () => {
         <Image src={logo} alt="Logo" className="p-4 rounded-full w-8rem h-8rem"/>
       </div>
       <div className="flex flex-wrap gap-8 overflow-visible md:justify-center pr-4">
-        <Link href={"/"} className={buttonClass}>Habilidades</Link>
-        <Link href={"/"} className={buttonClass}>Proyectos</Link>
-        <Link href={"/"} className={buttonClass}>Contáctame</Link>
+        <ScrollLink to="about-me" smooth={true} duration={500} className={buttonClass}>Sobre mí</ScrollLink>
+        <ScrollLink to="skills" smooth={true} duration={500} className={buttonClass}>Habilidades</ScrollLink>
+        <ScrollLink to="projects" smooth={true} duration={500} className={buttonClass}>Proyectos</ScrollLink>
+        <ScrollLink to="contact" smooth={true} duration={500} className={buttonClass}>Contáctame</ScrollLink>
         <button 
           onClick={() => window.open("https://drive.google.com/file/d/1WluP00BgfoBYTNWBVjrCYz0BTgD6MUNl/view?usp=drive_link", "_blank")} 
           className={buttonClass}>
