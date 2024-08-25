@@ -21,7 +21,7 @@ const Links: React.FC = () => {
             <h1 className="sub-title mt-1">Info. Extra</h1>
                 <div className='links'>
                 <button
-                    onClick={() => window.open("https://drive.google.com/file/d/1WluP00BgfoBYTNWBVjrCYz0BTgD6MUNl/view?usp=drive_link", "_blank")} 
+                    onClick={() => window.open("https://drive.google.com/file/d/1N8zH3t_5OFHuZ82NzRzgqekckGPFHBSK/view?usp=drive_link", "_blank")} 
                     className={buttonClass}>
                 <Image src={cv} alt='Curriculum'/>
                 </button>
