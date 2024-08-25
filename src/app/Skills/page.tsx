@@ -4,7 +4,7 @@ import { EmblaOptionsType } from "embla-carousel";
 
 const carouselOptions: EmblaOptionsType = {
     loop: true,
-  };
+};
 
 const Skills: React.FC = () => {
     return (
