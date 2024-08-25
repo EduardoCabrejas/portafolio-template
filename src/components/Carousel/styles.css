@@ -19,7 +19,7 @@
     --slide-size: 75%;
   }
   .viewport {
-    @apply overflow-hidden rounded-xl h-20rem;
+    @apply overflow-hidden rounded-xl h-15rem;
     background-color: var(--viewBg);
   }
   .child_container {
@@ -31,7 +31,7 @@
   .slide {
     background-color: var(--slideBg);
     border-radius: 3rem;
-    margin: 2rem;
+    margin: 1.5rem 0 1.5rem 1.5rem;
     padding: 2rem;
     display: flex;
     justify-content: center;
@@ -63,9 +63,8 @@
   }
 
   .imageWrapper {
-    width: 150px;
-    height: 150px;
-    padding: 0.5rem;
+    width: 100px;
+    height: 100px;
   }
 
   .imageWrapper::after {

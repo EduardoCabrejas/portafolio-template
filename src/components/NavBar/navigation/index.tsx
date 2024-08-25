@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
   const buttonClass = theme === 'light' ? 'navButtonLight' : 'navButtonDark';
 
   return (
-    <div className="navbar grid grid-cols-[40%_60%] items-center w-full h-12rem">
+    <div id="nav-bar" className="navbar grid grid-cols-[40%_60%] items-center w-full h-12rem">
       <div className="flex flex-col md:flex-row justify-center items-center gap-4">
         <Image src={logo} alt="Logo" className="p-4 rounded-full w-8rem h-8rem"/>
       </div>

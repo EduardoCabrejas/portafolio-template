@@ -12,15 +12,18 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^5.16.7",
+    "emailjs-com": "^3.2.0",
     "embla-carousel": "^8.2.0",
     "embla-carousel-auto-scroll": "^8.2.0",
     "embla-carousel-react": "^8.2.0",
+    "formik": "^2.4.6",
     "next": "14.2.6",
     "next-fonts": "^1.5.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scroll": "^1.9.0",
-    "sharp": "^0.33.5"
+    "sharp": "^0.33.5",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/next": "^9.0.0",

@@ -4,8 +4,7 @@ import profile from "@/assets/images/profile 0.png";
 const AboutMe: React.FC = () => {
   return (
     <>
-      <div className="bodyContainer">
-        <div className="grid grid-cols-2 gap-x-4 items-center m-auto">
+        <div className="flex flex-col md:grid grid-cols-2 gap-x-4 items-center m-auto">
           <div className="overflow-hidden">
             <h1 className="title">Sobre Mi</h1>
             <p className="text">
@@ -28,7 +27,6 @@ const AboutMe: React.FC = () => {
             />
           </div>
         </div>
-      </div>
     </>
   );
 };

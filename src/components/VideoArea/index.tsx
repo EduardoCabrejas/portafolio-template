@@ -19,12 +19,6 @@ const VideoArea: React.FC = () => {
           </p>
         </div>
         <div className="videoContainer">
-          <p className="redact">
-            En mi último Proyecto Integrador, diseñé un e-commerce especializado
-            en productos Apple. Los usuarios registrados pueden explorar y
-            buscar productos en detalle, agregar artículos al carrito de
-            compras, realizar pedidos, y cancelar órdenes si así lo desean.
-          </p>
           <iframe
             className="video"
             src="https://youtube.com/embed/DCmIK3eQYns"
@@ -32,6 +26,12 @@ const VideoArea: React.FC = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
+          <p className="redact">
+            En mi último Proyecto Integrador, diseñé un e-commerce especializado
+            en productos Apple. Los usuarios registrados pueden explorar y
+            buscar productos en detalle, agregar artículos al carrito de
+            compras, realizar pedidos, y cancelar órdenes si así lo desean.
+          </p>
         </div>
         <div className="videoContainer">
           <iframe

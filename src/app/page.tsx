@@ -2,6 +2,7 @@ import AboutMe from "./Home/page";
 import { Suspense } from "react";
 import Skills from "./Skills/page";
 import Projects from "./Projects/page";
+import Contact from "./Contact/page";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           </div>
         }
       >
+        <div className="bodyContainer">
         <div id="about-me">
           <AboutMe />
         </div>
@@ -28,7 +30,8 @@ export default function Home() {
         <Projects />
         </div>
         <div id="contact">
-          {/* Contenido de Contacto */}
+          <Contact />
+        </div>
         </div>
       </Suspense>
     </>

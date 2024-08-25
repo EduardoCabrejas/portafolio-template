@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar/navigation";
 import ThemeMode from "@/components/Buttons/themes";
 const inter = Inter({ subsets: ["latin"] });
 import { ThemeProvider } from "@/context/themeContext";
+import ScrollToTopButton from "@/components/Buttons/move";
 
 export const metadata: Metadata = {
   title: "Eduardo A. Cabrejas",
@@ -20,12 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="light">
+    <html lang="es" data-theme="light">
       <body className={`${inter.className} flex flex-col bg-bgColor relative`}>
       <ThemeProvider>
-          <NavBar />
+          <NavBar/>
           <main className="min-h-screen">{children}</main>
           <ThemeMode />
+          <ScrollToTopButton/>
         </ThemeProvider>
       </body>
     </html>

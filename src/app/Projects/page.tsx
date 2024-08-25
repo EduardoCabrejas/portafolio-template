@@ -10,13 +10,13 @@ const Projects: React.FC = () => {
 
     return (
         <>
-        <div className="bodyContainer">
+        <div className="area">
             <h1 className="title">Proyectos</h1>
             <p className="text">Durante mi período de estudio, he adquirido un conocimiento profundo de diversas tecnologías y herramientas. Sin embargo, sigo en una constante búsqueda de nuevas oportunidades para aprender y aplicar lo que voy descubriendo a través de redes profesionales y comunidades de desarrolladores. Estoy seguro de mi capacidad y precisión en el manejo de lo siguiente:</p>
             <div className="mt-8">
                 <VideoArea/>
             </div>
-            <div className="m-5 grid grid-cols-[70%_30%] gap-4 items-center">
+            <div className="mt-8 flex flex-col justify-center md:grid grid-cols-[70%_30%] gap-4 items-center">
             <p className="text">Para quienes se encuentren interesados y quieran acceder a conocer detalladamente mis proyectos, les dejo el enlace sobre mi perfil de GitHub aquí presente:</p>
             <button 
           onClick={() => window.open("https://github.com/EduardoCabrejas", "_blank")} 
