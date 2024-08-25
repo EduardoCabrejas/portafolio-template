@@ -1,13 +1,14 @@
 "use client";
-import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useTheme } from '@/context/themeContext';
 
 const ContactForm: React.FC = () => {
   const { theme } = useTheme();
   const buttonClass = theme === 'light' ? 'formButtonLight' : 'formButtonDark';
 
-  // Estado para manejar los valores del formulario y los errores
   const [formValues, setFormValues] = useState({
     name: '',
     email: '',
@@ -21,7 +22,6 @@ const ContactForm: React.FC = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formStatus, setFormStatus] = useState<string | null>(null);
 
   const validateForm = (): boolean => {
     const newErrors = {
@@ -36,10 +36,10 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
     if (!validateForm()) return;
 
     setIsSubmitting(true);
-    setFormStatus(null);
 
     try {
       await emailjs.send(
@@ -54,11 +54,30 @@ const ContactForm: React.FC = () => {
         },
         'asmU48oKvPEdJ8Kku'
       );
-      setFormStatus('Correo enviado exitosamente');
+      
+      toast.success('Correo enviado exitosamente', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+
       setFormValues({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
       console.error('Error al enviar el correo:', error);
-      setFormStatus('Hubo un problema al enviar el correo');
+
+      toast.error('Hubo un problema al enviar el correo', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -73,72 +92,73 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="contact-form">
-      <h1 className='sub-title'>Envíame un correo.</h1>
-      
-      <div className="form-group">
-        <div className='group'>
-        <label htmlFor="name" className='text'>Nombre</label>
-        {errors.name && <p className="error-message">{errors.name}</p>}
-        </div>
-        <input
-          name="name"
-          type="text"
-          value={formValues.name}
-          onChange={handleChange}
-          className="form-control"
-        />
-      </div>
+    <>
+      <ToastContainer />
+      <form onSubmit={handleSubmit} className="contact-form">
+        <h1 className='sub-title'>Envíame un correo.</h1>
 
-      <div className="form-group">
-      <div className='group'>
-        <label htmlFor="email" className='text'>E-mail</label>
-        {errors.email && <p className="error-message">{errors.email}</p>}
-      </div>
-        <input
-          name="email"
-          type="email"
-          value={formValues.email}
-          onChange={handleChange}
-          className="form-control"
-        />
-      </div>
-
-      <div className="form-group">
-        <div className='group'>
-        <label htmlFor="subject" className='text'>Asunto</label>
-        {errors.subject && <p className="error-message">{errors.subject}</p>}
+        <div className="form-group">
+          <div className='group'>
+            <label htmlFor="name" className='text'>Nombre</label>
+            {errors.name && <p className="error-message">{errors.name}</p>}
+          </div>
+          <input
+            name="name"
+            type="text"
+            value={formValues.name}
+            onChange={handleChange}
+            className="form-control"
+          />
         </div>
-        <input
-          name="subject"
-          type="text"
-          value={formValues.subject}
-          onChange={handleChange}
-          className="form-control"
-        />
+
+        <div className="form-group">
+          <div className='group'>
+            <label htmlFor="email" className='text'>E-mail</label>
+            {errors.email && <p className="error-message">{errors.email}</p>}
+          </div>
+          <input
+            name="email"
+            type="email"
+            value={formValues.email}
+            onChange={handleChange}
+            className="form-control"
+          />
+        </div>
+
+        <div className="form-group">
+          <div className='group'>
+            <label htmlFor="subject" className='text'>Asunto</label>
+            {errors.subject && <p className="error-message">{errors.subject}</p>}
+          </div>
+          <input
+            name="subject"
+            type="text"
+            value={formValues.subject}
+            onChange={handleChange}
+            className="form-control"
+          />
+        </div>
+
+        <div className="form-group">
+          <div className='group'>
+            <label htmlFor="message" className='text'>Mensaje</label>
+            {errors.message && <p className="error-message">{errors.message}</p>}
+          </div>
+          <textarea
+            name="message"
+            value={formValues.message}
+            onChange={handleChange}
+            className="form-control"
+          />
+        </div>
         
-      </div>
-
-      <div className="form-group">
-      <div className='group'>
-        <label htmlFor="message" className='text'>Mensaje</label>
-        {errors.message && <p className="error-message">{errors.message}</p>}
-      </div>
-        <textarea
-          name="message"
-          value={formValues.message}
-          onChange={handleChange}
-          className="form-control"
-        />
-      </div>
-      <div className='flex justify-center items-center mb-4'>
-      <button type="submit" disabled={isSubmitting} className={buttonClass}>
-        Enviar
-      </button>
-      </div>
-      
-      {formStatus && <p className="form-status">{formStatus}</p>}
-    </form>
+        <div className='flex justify-center items-center mb-4'>
+          <button type="submit" disabled={isSubmitting} className={buttonClass}>
+            Enviar
+          </button>
+        </div>
+      </form>
+    </>
   );
 };
 

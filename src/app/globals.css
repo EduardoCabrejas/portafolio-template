@@ -240,3 +240,11 @@ body {
   @apply grid grid-cols-2 gap-4;
 }
 
+/* notifs */
+.Toastify__toast--success{
+  @apply top-16 rounded-md p-2;
+}
+
+.Toastify__toast--error {
+  @apply top-16 rounded-md p-2;
+}
