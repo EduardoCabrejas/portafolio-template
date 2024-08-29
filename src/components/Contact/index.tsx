@@ -17,8 +17,9 @@ const Links: React.FC = () => {
             <section>
             <ContactForm />
             </section>
-            <section className='flex flex-col justify-center items-center'>
-            <h1 className="sub-title mt-1">Info. Extra</h1>
+            <section>
+            <h1 className="sub-title">Info. Extra</h1>
+            <div className='flex flex-col justify-around mt-8'>
                 <div className='links'>
                 <button
                     onClick={() => window.open("https://drive.google.com/file/d/1N8zH3t_5OFHuZ82NzRzgqekckGPFHBSK/view?usp=drive_link", "_blank")} 
@@ -42,6 +43,7 @@ const Links: React.FC = () => {
                 <Image src={lin} alt='Linkedin'/>
                 </button>
                 <p className='text'>Linkedin</p>
+                </div>
                 </div>
             </section>
         </div>
