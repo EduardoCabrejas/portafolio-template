@@ -1,7 +1,6 @@
 const VideoArea: React.FC = () => {
   return (
-    <>
-      <div className="projectsContainer">
+      <section className="projectsContainer">
         <div className="videoContainer">
           <iframe
             className="video"
@@ -50,8 +49,23 @@ const VideoArea: React.FC = () => {
             interfaces, modales, secciones administrativas y tablas.
           </p>
         </div>
-      </div>
-    </>
+        <div className="videoContainer">
+          <iframe
+            className="video"
+            src="https://youtube.com/embed/mXecCxzYujg"
+            title="StockSaleApp Presentation"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+          <p className="redact">
+          Este es un sitio web desarrollado para un cliente en mi puesto de Freelance Developer. En este sitio, el administrador o encargado de la ferretería podrá:<br/>
+          <p className="redact-sm">• Gestionar a los usuarios, proveedores y sus productos.<br/>
+• Gestionar los movimientos de compra/venta de los productos, como así también sus ordenes para reabastecer el comercio.<br/>
+• Gestionar los ingresos/egresos del día, como así también los detalles de todos los movimientos sucedidos.<br/>
+• Alertarse ante productos al límite de stock para ordenar su compra de reabastecimiento.</p>
+</p>
+        </div>
+      </section>
   );
 };
 
