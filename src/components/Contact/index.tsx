@@ -22,7 +22,7 @@ const Links: React.FC = () => {
             <div className='flex flex-col justify-around mt-8'>
                 <div className='links'>
                 <button
-                    onClick={() => window.open("https://drive.google.com/file/d/1RPGoDeXxzD-wLK3LwTdKw5G7jjPVr_cU/view?usp=sharing", "_blank")} 
+                    onClick={() => window.open("https://drive.google.com/file/d/1vmSR7xg78DeRWbQRoGca2BdLe931iwqn/view?usp=sharing", "_blank")} 
                     className={buttonClass}>
                 <Image src={cv} alt='Curriculum'/>
                 </button>
