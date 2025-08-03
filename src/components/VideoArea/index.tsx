@@ -1,71 +1,74 @@
-const VideoArea: React.FC = () => {
+import React, { FC } from "react";
+import VideoCard from "./VideoCard";
+
+const VideoArea: FC = () => {
   return (
-      <section className="projectsContainer">
-        <div className="videoContainer">
-          <iframe
-            className="video"
-            src="https://youtube.com/embed/i4scN6wH3DQ"
-            title="Proyecto Integrador Nro. 3"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-          <p className="redact">
-            En mi tercer Proyecto Integrador, desarrollé una página para el
-            emprendimiento de mi madre, donde se detallan las actividades
-            ofrecidas, el equipo detrás y los servicios disponibles. Implementé
-            un sistema de reservas que permite a los usuarios registrados
-            agendar y cancelar turnos según sus necesidades.
+    <section className="flex flex-col rounded-xl border-2 border-[var(--borderColor)] bg-[var(--navBarBackground)]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mx-4">
+      <VideoCard
+        src="https://youtube.com/embed/mXecCxzYujg"
+        description={
+          <>
+          <h1 className="redact-title">StockSaleApp Website</h1>
+          <p className="redact">Una sitio web para gestionar una ferretería. Proyecto freelance trabajado con .NET, C# y JavaScript.</p>
+            <ul className="redact list-disc pl-4 mt-2">
+              <li>Gestionar a los usuarios, proveedores y sus productos.</li>
+              <li>Gestionar los movimientos de compra/venta.</li>
+              <li>Gestionar turnos para usuarios y proveedores.</li>
+              <li>Alertarse ante productos al límite de stock.</li>
+            </ul>
+          </>
+        }
+      />
+      <VideoCard
+        src="https://youtube.com/embed/2bcEALmt18g"
+        description={
+          <>
+          <h1 className="redact-title">Stream Games Tournaments</h1>
+          <p className="redact">Una plataforma de
+            streaming para torneos de E-sports, donde podés ver
+            torneos, formar equipos y unirte a las competiciones. 
+            Contribuí destacadamente en el Frontend, especificamente en botones, banners,
+            tarjetas, filtros, formularios, interfaces, modales, y otras cosas.
           </p>
-        </div>
-        <div className="videoContainer">
-          <iframe
-            className="video"
-            src="https://youtube.com/embed/DCmIK3eQYns"
-            title="Proyecto Integrador Nro. 4"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-          <p className="redact">
-            En mi último Proyecto Integrador, diseñé un e-commerce especializado
-            en productos Apple. Los usuarios registrados pueden explorar y
-            buscar productos en detalle, agregar artículos al carrito de
-            compras, realizar pedidos, y cancelar órdenes si así lo desean.
-          </p>
-        </div>
-        <div className="videoContainer">
-          <iframe
-            className="video"
-            src="https://youtube.com/embed/2bcEALmt18g"
-            title="Presentación del Proyecto Final"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-          <p className="redact">
-            En mi proyecto final, junto a mi equipo, creamos una plataforma de
-            streaming para torneos de E-sports. Los usuarios pueden visualizar
-            torneos, formar equipos y unirse a las competiciones. Contribuí en
-            el desarrollo de múltiples elementos, como botones, banners,
-            tarjetas de presentación, filtros, formularios, gráficos,
-            interfaces, modales, secciones administrativas y tablas.
-          </p>
-        </div>
-        <div className="videoContainer">
-          <iframe
-            className="video"
-            src="https://youtube.com/embed/mXecCxzYujg"
-            title="StockSaleApp Presentation"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-          <p className="redact">
-          Este es un sitio web desarrollado para un cliente en mi puesto de Freelance Developer. En este sitio, el administrador o encargado de la ferretería podrá:<br/>
-          <p className="redact-sm">• Gestionar a los usuarios, proveedores y sus productos.<br/>
-• Gestionar los movimientos de compra/venta de los productos, como así también sus ordenes para reabastecer el comercio.<br/>
-• Gestionar los ingresos/egresos del día, como así también los detalles de todos los movimientos sucedidos.<br/>
-• Alertarse ante productos al límite de stock para ordenar su compra de reabastecimiento.</p>
-</p>
-        </div>
-      </section>
+          </>
+        }
+      />
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4 mx-4">
+        <VideoCard
+          src="https://youtube.com/embed/DCmIK3eQYns"
+          description={
+            <>
+            <h1 className="redact-title">
+              E-commerce Apple Products
+            </h1>
+              <p className="redact">Diseñé un e-commerce especializado
+              en productos Apple. Los usuarios una vez registrados, pueden explorar para encontrar los productos disponibles, analizarlos en detalle, agregar artículos al carrito de
+              compras, realizar pedidos, y cancelar órdenes si así lo desean.
+              </p>
+            </>
+          }
+        />
+        <VideoCard
+          src="https://youtube.com/embed/i4scN6wH3DQ"
+          description={
+            <>
+            <h1 className="redact-title">A.P.I.S. Desprogramación</h1>
+            <p className="redact">
+              Desarrollé una página para el
+              emprendimiento de mi madre, donde se detallan las actividades
+              ofrecidas, el equipo detrás y los servicios disponibles. Implementé
+              un sistema de reservas que permite a los usuarios registrados
+              agendar y cancelar turnos según sus necesidades.
+            </p>
+            </>
+          }
+        />
+      </div>
+
+    </section>
   );
 };
 
