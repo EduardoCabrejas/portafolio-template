@@ -25,10 +25,10 @@ return(
       </div>
 
       <div className="hidden md:flex gap-4 justify-center items-center">
-        <ScrollLink to="experience" smooth duration={500} className={buttonClass}>Experiencia</ScrollLink>
-        <ScrollLink to="education" smooth duration={500} className={buttonClass}>Educación</ScrollLink>
-        <ScrollLink to="skills" smooth duration={500} className={buttonClass}>Habilidades</ScrollLink>
-        <ScrollLink to="projects" smooth duration={500} className={buttonClass}>Proyectos</ScrollLink>
+        <ScrollLink to="experience" smooth duration={500} offset={-100} className={buttonClass}>Experiencia</ScrollLink>
+        <ScrollLink to="education" smooth duration={500} offset={-100} className={buttonClass}>Educación</ScrollLink>
+        <ScrollLink to="skills" smooth duration={500} offset={-100} className={buttonClass}>Habilidades</ScrollLink>
+        <ScrollLink to="projects" smooth duration={500} offset={-100} className={buttonClass}>Proyectos</ScrollLink>
         <button
           onClick={() => window.open("https://drive.google.com/file/d/1nNO2qHBrm_J6BkX9_7IUMpTKrMg5-woP/view?usp=sharing", "_blank")}
           className={buttonClass}

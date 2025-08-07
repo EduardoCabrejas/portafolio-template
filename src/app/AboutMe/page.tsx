@@ -38,7 +38,7 @@ const MotionWrapper = isMobile ? "div" : motion.div;
             <Image src={linkedin} alt="GitHub Icon" title="GitHub" className="w-[1.5rem] h-[1.5rem] md:w-[3.5rem] md:h-[3.5rem]"/>
           </button>
       </div>
-        <div className="flex flex-col md:grid grid-cols-2 gap-x-4 items-center mb-8">
+        <div className="flex flex-col md:grid grid-cols-2 gap-x-4 items-center">
           <div className="flex justify-center items-center flex-col">
             <div className="relative w-[8rem] h-[8rem] md:w-[18rem] md:h-[18rem] [transform-style:preserve-3d] transition-transform duration-700 hover:[transform:rotateY(180deg)] perspective">
             {/* Cara frontal */}

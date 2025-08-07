@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
-import ThemeMode from "@/components/Buttons/themes";
-import ScrollToTopButton from "@/components/Buttons/move";
+import ThemeMode from "@/components/Buttons/Themes";
+import ScrollToTopButton from "@/components/Buttons/Move";
 import { ThemeProvider } from "@/context/themeContext";
 import { Poppins, Inter} from "next/font/google";
 

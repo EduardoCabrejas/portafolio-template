@@ -12,7 +12,7 @@
   --textColor: #000;
   --titleColor: #043A5E;
   --borderColor: #005a5b;
-  --textShadow: 1px 1px 2px #035D9B, 0 0 2rem #043A5E, 0 0 1rem #01414a;
+  --textShadow: 1px 1px 2px #035D9B, 0 0 1.5rem #043A5E, 0 0 1rem #01414a;
   --glow1: rgba(0,164,186,1);
   --glow2: rgba(4, 13, 35, 0.5);
   --glow3: rgba(0, 90, 91,0.75);
@@ -28,7 +28,7 @@
   --textColor: #95B3FF; 
   --titleColor: #35B4FE;
   --borderColor: #00d5d9;
-  --textShadow: 1px 1px 2px #9AD7FF, 0 0 2rem #76C8FF, 0 0 1rem #00A4BA;
+  --textShadow: 1px 1px 2px #9AD7FF, 0 0 1.5rem #76C8FF, 0 0 1rem #00A4BA;
   --textHover: white;
   --glow1: rgba(53,180,254,0.2);
   --glow2: rgba(0,213,217,0.2);
@@ -63,6 +63,15 @@ main {
   background-color: var(--bgColor);
 }
 
+.bg-opacity-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--navBarBackground);
+  opacity: 0.25;
+  z-index: 0;
+}
+
 .navbar {
   background: radial-gradient(circle at center, 
   var(--primaryGradientStart), 
@@ -71,6 +80,13 @@ main {
 }
 
 /* texts */
+.link {
+  transition: text-shadow 0.5s ease-in-out;
+  &:hover {
+    text-shadow: var(--textShadow);
+  }
+}
+
 .title {
   @apply text-center text-xl font-Poppins font-black md:text-[2.5rem];
   color: var(--titleColor);
@@ -81,8 +97,12 @@ main {
 }
 
 .sub-title {
-  @apply text-center text-lg font-Poppins font-semibold md:text-2xl underline mb-4;
+  @apply text-start text-lg font-Poppins font-semibold md:text-[1.75rem] underline;
   color: var(--titleColor);
+  transition: text-shadow 0.5s ease-in-out;
+  &:hover {
+    text-shadow: var(--textShadow);
+  }
 }
 
 .text {
@@ -93,6 +113,11 @@ main {
 .redact-title {
   color: var(--titleColor);
   @apply text-[1rem] font-Inter font-black md:text-xl md:text-start;
+}
+
+.redact-sub-title {
+  color: var(--titleColor);
+  @apply text-[1rem] font-Inter font-black md:text-lg md:text-start;
 }
 
 .redact {

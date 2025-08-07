@@ -9,7 +9,7 @@ const ScrollToTopButton: FC = () => {
       to="nav-bar"
       smooth={true}
       duration={500}
-      className="fixed bottom-4 right-4 z-50 flex items-center justify-center w-[50px] h-[50px] rounded-full bg-[#043a5e] cursor-pointer transition-all duration-500 ease-in-out hover:w-[140px] hover:rounded-[50px] hover:bg-[var(--navBarBackground)] hover:shadow-[0px_0px_0px_4px_#00A4BA]"
+      className="fixed bottom-4 right-4 z-50 flex items-center justify-center w-[50px] h-[50px] rounded-full bg-[#043a5e] cursor-pointer transition-all duration-500 ease-in-out hover:bg-[var(--navBarBackground)] hover:shadow-[0px_0px_0px_4px_#00A4BA]"
       title="Volver al Inicio"
       aria-label="Volver al Inicio"
     >
